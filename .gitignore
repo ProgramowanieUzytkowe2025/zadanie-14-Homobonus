@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+package-lock.json*
+
+Klient/node_modules/*
+Klient/build/
+API/node_modules/
+API/build/
+API/__pycache__/
+API/*.pyc
+API/alembic/versions/*.pyc
+API/alembic/__pycache__/*

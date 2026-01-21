@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+:root {
+  --bg-color: #f8f9fa; /* Lighter gray for light mode */
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+}
+
+[data-theme='dark'] {
+  --bg-color: #212529;
+  --text-color: #f8f9fa;
+  --card-bg: #343a40;
+  --border-color: #495057;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Apply Google Font */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Gradient Navbar Style */
+.gradient {
+  background: linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%)
+}
+
+/* Custom Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color) !important;
+    color: var(--text-color);
+}
+
+/* Nadpisanie tabeli bootstrapa dla trybu ciemnego */
+[data-theme='dark'] .table {
+  color: #f8f9fa;
+  border-color: #495057;
+}
+
+[data-theme='dark'] .table-hover > tbody > tr:hover > * {
+    --bs-table-accent-bg: rgba(255, 255, 255, 0.075);
+}
+
+/* Poprawka dla elementów tekstowych w trybie ciemnym */
+[data-theme='dark'] .text-muted {
+  color: #adb5bd !important;
+}
+
+/* Stylizacja formularzy w trybie ciemnym */
+[data-theme='dark'] .form-control,
+[data-theme='dark'] .form-select {
+  background-color: #2b3035;
+  border-color: #495057;
+  color: #f8f9fa;
+}
+
+[data-theme='dark'] .form-control:focus,
+[data-theme='dark'] .form-select:focus {
+  background-color: #2b3035;
+  border-color: #86b7fe;
+  color: #f8f9fa;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+[data-theme='dark'] .form-control::placeholder {
+  color: #adb5bd;
+}
+
+[data-theme='dark'] .list-group-item {
+  border-color: #495057 !important;
+  color: var(--text-color);
+}
+
+/* Custom styles for react-confirm-alert */
+.react-confirm-alert-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.custom-ui {
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
